@@ -49,7 +49,7 @@ html > body[data-scroll-locked] {
 
 /* --- Grafika ze samostatné catch-all instance --- */
 body {
-   background-image: url('/background.svg');
+   background-image: url('/img/catch-all/background.svg');
    background-repeat: no-repeat;
    background-position: right top;
    background-size: 70%;
