@@ -2,7 +2,7 @@ import { i18n } from '@/lib/i18n';
 import { defineI18nUI } from 'fumadocs-ui/i18n';
 
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { includeCzech, logo } from './shared';
+import { includeCzech } from './shared';
 
 export const i18nUI = defineI18nUI(i18n, {
   en: {
@@ -18,10 +18,9 @@ export const i18nUI = defineI18nUI(i18n, {
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      // Široké logo (wordmark "Data Catch-all Repository") jako jediný obsah
-      // záhlaví – shodně se samostatnou instancí nrp-catch-all-docs.
+      // Anglický wordmark Data Catch-all Repository jako jediný obsah záhlaví.
       // eslint-disable-next-line @next/next/no-img-element
-      title: (<img src={logo} alt="Data Catch-all Repository" width={140} height={52} />),
+      title: (<img src="https://datarepo.eosc.cz/static/images/logo_en.svg" alt="Data Catch-all Repository" width={158} height={63} />),
       url: '/',
     },
     themeSwitch: {
