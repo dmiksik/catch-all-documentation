@@ -1,0 +1,189 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+}
+
+@font-face {
+  font-family: 'Fira Code VF';
+  font-weight: 300 700;
+  font-style: normal;
+  src: url('/fonts/FiraCode-VF.woff2') format('woff2-variations'),
+    url('/fonts/FiraCode-VF.woff') format('woff-variations');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/InterVariable.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/InterVariable-Italic.woff2') format('woff2');
+}
+
+.font-mono {
+  font-variant-ligatures: none;
+}
+
+/* --- Grafika ze samostatné catch-all instance --- */
+body {
+   background-image: url('/background.svg');
+   background-repeat: no-repeat;
+   background-position: right top;
+   background-size: 70%;
+}
+
+/* --- Barevné téma ze samostatné catch-all instance (~/nrp-catch-all-docs) --- */
+:root {
+  --color-fd-background:           hsl(180, 14%, 96%);
+  --color-fd-foreground:           hsl(270, 8%, 3%);
+  --color-fd-muted:                hsl(183, 20%, 92%);
+  --color-fd-muted-foreground:     hsl(183, 15%, 42%);
+  --color-fd-popover:              hsl(0, 0%, 100%);
+  --color-fd-popover-foreground:   hsl(183, 50%, 10%);
+  --color-fd-card:                 hsl(183, 15%, 94%);
+  --color-fd-card-foreground:      hsl(270, 8%, 3%);
+  --color-fd-border:               hsla(183, 30%, 70%, 40%);
+  --color-fd-primary:              hsl(183, 95%, 19%);
+  --color-fd-primary-foreground:   hsl(0, 0%, 100%);
+  --color-fd-secondary:            hsl(183, 20%, 90%);
+  --color-fd-secondary-foreground: hsl(183, 95%, 19%);
+  --color-fd-accent:               hsla(183, 30%, 80%, 50%);
+  --color-fd-accent-foreground:    hsl(183, 95%, 19%);
+  --color-fd-ring:                 hsl(183, 95%, 19%);
+}
+
+.dark {
+  --color-fd-background:           hsl(183, 95%, 4%);
+  --color-fd-foreground:           hsl(183, 20%, 92%);
+  --color-fd-muted:                hsl(183, 40%, 10%);
+  --color-fd-muted-foreground:     hsl(183, 20%, 60%);
+  --color-fd-popover:              hsl(183, 50%, 7%);
+  --color-fd-popover-foreground:   hsl(183, 20%, 90%);
+  --color-fd-card:                 hsl(183, 40%, 8%);
+  --color-fd-card-foreground:      hsl(183, 20%, 92%);
+  --color-fd-border:               hsla(183, 40%, 35%, 40%);
+  --color-fd-primary:              hsl(183, 60%, 55%);
+  --color-fd-primary-foreground:   hsl(183, 95%, 4%);
+  --color-fd-secondary:            hsl(183, 40%, 12%);
+  --color-fd-secondary-foreground: hsl(183, 20%, 90%);
+  --color-fd-accent:               hsla(183, 40%, 25%, 60%);
+  --color-fd-accent-foreground:    hsl(183, 20%, 90%);
+  --color-fd-ring:                 hsl(183, 60%, 55%);
+}
+
+.dark #nd-sidebar {
+  --color-fd-muted:      hsl(183, 40%, 12%);
+  --color-fd-secondary:  hsl(183, 40%, 14%);
+}
+
+article a:hover {
+  color: #C92876;
+}
+
+.dark article a:hover {
+  color: #fd98b1;
+}
+
+.prose {
+  --tw-prose-links: var(--color-fd-primary);
+}
+
+.prose :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    font-weight: 600 !important;
+}
+
+/* --- Styling tabulek (plumbing z image cerit.io/docs/fuma) --- */
+table {
+    width: 100%;
+    table-layout: auto;
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background: transparent !important;
+    border-width: 0px !important;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+    text-align: left;
+    border-bottom-width: 1px;
+    border-bottom-color: #e2e8f0;
+    color: #334155;
+    background: transparent !important;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+    background: transparent !important;
+}
+
+th {
+    color: var(--tw-prose-headings);
+    font-weight: 600;
+    vertical-align: bottom;
+    padding-right: 0.5714286em;
+    padding-bottom: 0.5714286em;
+    padding-left: 0;
+    padding-top: 0;
+    background: transparent !important;
+    border-inline-start-width: 0px !important;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+    border-bottom-width: 1px;
+    border-bottom-color: #e5e7eb;
+    table-layout: auto;
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background: transparent !important;
+}
+
+td {
+    display: table-cell;
+    vertical-align: baseline;
+    unicode-bidi: isolate;
+    padding-top: 0.5714286em;
+    padding-right: 0.5714286em;
+    padding-bottom: 0.5714286em;
+    padding-left: 0;
+    background: transparent !important;
+    border-inline-start-width: 0px !important;
+}

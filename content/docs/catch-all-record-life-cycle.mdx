@@ -1,0 +1,151 @@
+---
+title: Record Life Cycle and Visibility
+---
+
+This guide explains the basic life cycle of a record and the available
+visibility settings in the Data Catch-all Repository.
+
+## Record Life Cycle
+
+### Draft
+
+After you select **Save draft**, the record is stored as a draft.
+
+While the record remains a draft, you can:
+
+- edit its metadata;
+- upload or remove files;
+- configure its community and visibility;
+- save your progress;
+- preview the record;
+- resolve validation errors.
+
+A draft can be saved even if it is incomplete. However, at least one file must
+be uploaded and all required metadata must be provided before the record can
+be submitted for publication. Metadata-only records are not supported.
+
+### Publication Request
+
+Once the record is complete and all validation errors have been resolved,
+select **Submit publish request**.
+
+The subsequent processing of the record depends on the workflow and
+permissions configured for the selected community. Depending on the community,
+a publication request may require curation before the record is published.
+
+The actions available after submitting a publication request depend on the
+current state of the record and the workflow of the selected community.
+
+### Published Record
+
+After publication, the record becomes available according to the visibility
+settings configured before submission.
+
+A DOI is registered during publication if a new DOI was requested in the
+**General information** section.
+
+For instructions on creating and submitting a record, see
+[Creating Records in the Data Catch-all Repository](catch-all-repository-record-creation).
+
+## Visibility
+
+Visibility is configured in the **Community and Access** section of the record
+form.
+
+Access can be configured separately for the record metadata and its uploaded
+files.
+
+The following configurations are available:
+
+- **Public record and public files** — the metadata and uploaded files are
+  publicly accessible.
+- **Public record and restricted files** — the metadata is publicly
+  accessible, but access to the uploaded files is restricted.
+- **Restricted full record** — both the metadata and uploaded files are
+  restricted.
+
+Restricted content is not publicly accessible. Access is governed by the
+permissions configured for the record.
+
+Restricted content can remain restricted without an embargo. In this case, it
+does not automatically become publicly accessible and remains available only
+to users with the appropriate permissions.
+
+An embargo is optional and should be used when the restricted content is
+intended to become publicly accessible automatically on a specified date.
+
+For detailed instructions, see the
+[Community and Access](catch-all-repository-record-creation#community-and-access)
+section of the record creation guide.
+
+## Embargo
+
+An embargo temporarily restricts access to either the uploaded files or the
+full record.
+
+An embargo can only be enabled when **Full record** or **Files only** is set
+to **Restricted**.
+
+To apply an embargo:
+
+1. Open the **Community and Access** section.
+2. Set **Full record** or **Files only** to **Restricted**.
+3. Select **Apply an embargo**.
+4. Enter the embargo end date in the **Embargo until** field.
+5. Optionally, enter a reason in the **Embargo reason** field.
+
+The embargo end date is required when an embargo is enabled.
+
+### Files-only Embargo
+
+When only the files are embargoed:
+
+- the record metadata remains publicly accessible;
+- the uploaded files remain restricted until the embargo expires;
+- the files automatically become publicly accessible after the embargo end
+  date.
+
+### Full-record Embargo
+
+When the full record is embargoed:
+
+- both the metadata and uploaded files remain restricted;
+- the full record automatically becomes publicly accessible after the embargo
+  end date.
+
+An embargo applies to the complete set of uploaded files. It cannot be
+configured separately for individual files within the same record.
+
+For detailed instructions, see
+[Applying an Embargo](catch-all-repository-record-creation#applying-an-embargo).
+
+## User Access
+
+### Public Users
+
+Users who are not signed in can search for and access publicly available
+records and files.
+
+Restricted records and restricted files are not publicly accessible.
+
+### Submitters
+
+Users with standalone depositor access or a community role that permits record
+submission can create and manage records according to their permissions.
+
+For information about obtaining submission permissions, see
+[Getting Access to the Data Catch-all Repository](catch-all-getting-started).
+
+### Community Roles
+
+Community roles determine which records and actions are available to a user.
+
+The available roles are:
+
+- **Community owner** — can manage the community;
+- **Curator** — can curate records submitted to the community;
+- **Submitter** — can submit records to the community;
+- **Member** — has read permissions within the community.
+
+For more information, see the
+[Guide for Communities](guide-for-communities).

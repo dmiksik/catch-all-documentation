@@ -1,0 +1,8 @@
+# Tento repozitář je "overlay" pro image cerit.io/docs/fuma – obsahuje jen
+# soubory, které se překrývají přes baked-in aplikaci. Žádný build tu neběží.
+.DS_Store
+*.log
+node_modules/
+.next/
+out/
+.source/
