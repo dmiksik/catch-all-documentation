@@ -9,9 +9,19 @@
   padding-bottom: calc(var(--spacing) * 1.3);
 }
 
-/* Horní odsazení středního sloupce sjednotit s pravým TOC sloupcem (pt-12 = 3rem).
-   Image vynucoval md:pt-8 / xl:pt-14, takže střed začínal níž a nekonzistentně
-   napříč breakpointy. ID selektor přebije Tailwind utility třídy. */
+/* Horní okraje obsahu všech tří sloupců srovnat na společnou linku 2rem.
+   ID selektory přebijí Tailwind utility třídy napříč breakpointy.
+   - levý sidebar (hlavička s logem): p-4 = 1rem  -> 2rem  (zvětšit)
+   - střed (článek):    md:pt-8 / xl:pt-14        -> 2rem  (zmenšit)
+   - pravý TOC:         pt-12 = 3rem              -> 2rem  (zmenšit) */
+#nd-sidebar > div:nth-child(1) {
+  padding-top: 2rem;
+}
+
 #nd-page {
-  padding-top: 3rem;
+  padding-top: 2rem;
+}
+
+#nd-toc {
+  padding-top: 2rem;
 }
