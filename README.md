@@ -29,7 +29,7 @@ tj. z gitu:
 docker run --rm -p 3000:3000 \
   -e STARTPAGE=/en/docs/catch-all-repository-introduction \
   -e AUTH_SECRET=$(openssl rand -base64 32) \
-  -e URL=https://github.com/NRP-CZ/catch-all-documentation.git \
+  -e URL=https://github.com/dmiksik/catch-all-documentation.git \
   -e BRANCH=fumadocs \
   cerit.io/docs/fuma:latest
 ```

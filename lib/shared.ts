@@ -8,7 +8,7 @@ export const footerImangePath = '/img/logos/einfra_cerit-zapati.svg';
 
 // fill this with your actual GitHub info, for example:
 export const gitConfig = {
-  user: 'NRP-CZ',
+  user: 'dmiksik',
   repo: 'catch-all-documentation',
   branch: 'fumadocs',
 };
