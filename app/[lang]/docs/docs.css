@@ -18,10 +18,16 @@
   padding-top: 2rem;
 }
 
+/* Střed o 0.5em výš než ostatní (2rem - 0.5em). */
 #nd-page {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 #nd-toc {
   padding-top: 2rem;
+}
+
+/* Search tlačítko odsadit od loga nad ním (bylo nalepené). */
+#nd-sidebar button[data-search-full] {
+  margin-top: 0.75rem;
 }
