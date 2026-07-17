@@ -47,12 +47,13 @@ html > body[data-scroll-locked] {
   font-variant-ligatures: none;
 }
 
-/* --- Grafika ze samostatné catch-all instance --- */
+/* --- Grafika ze samostatné catch-all instance (shodně s datarepo.eosc.cz) --- */
 body {
    background-image: url('/img/catch-all/background.svg');
    background-repeat: no-repeat;
-   background-position: right top;
-   background-size: 70%;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
 }
 
 /* --- Barevné téma ze samostatné catch-all instance (~/nrp-catch-all-docs) --- */

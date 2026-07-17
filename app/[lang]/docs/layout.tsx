@@ -15,9 +15,6 @@ export default async function Layout({ params, children }: LayoutProps<'/[lang]/
     sidebar: {
       defaultOpenLevel: 1,
       collapsible: false,
-      style: {
-        background: "transparent"
-      }
     },
     themeSwitch: { enabled: false }
   }
