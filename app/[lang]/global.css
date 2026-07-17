@@ -77,6 +77,34 @@ body {
    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
+/* --- Dark-mode úpravy ---
+   Přepínač témat je záměrně vypnutý (viz layout / themeSwitch: enabled: false),
+   ale tmavá varianta je připravená a použitelná, kdyby ji někdo aktivoval. */
+
+/* Tabulky: natvrdo světlé barvy nahradit theme-aware v dark. */
+.dark thead {
+   color: var(--color-fd-muted-foreground);
+   border-bottom-color: var(--color-fd-border);
+}
+
+.dark tr {
+   border-bottom-color: var(--color-fd-border);
+}
+
+/* Branded loga (navržená pro světlé pozadí) dát v dark na světlý chip,
+   ať zůstane čitelný tmavý text (název v hlavičce, popisky ve footeru). */
+.dark #nd-sidebar img[src*="logo_en"] {
+   background: #fff;
+   border-radius: 8px;
+   padding: 4px 8px;
+}
+
+.dark footer img[src*="eu_msmt_eosc"] {
+   background: #fff;
+   border-radius: 8px;
+   padding: 10px 14px;
+}
+
 /* --- Barevné téma ze samostatné catch-all instance (~/nrp-catch-all-docs) --- */
 :root {
   --color-fd-background:           hsl(180, 14%, 96%);
