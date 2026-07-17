@@ -49,11 +49,32 @@ html > body[data-scroll-locked] {
 
 /* --- Grafika ze samostatné catch-all instance (shodně s datarepo.eosc.cz) --- */
 body {
-   background-image: url('/img/catch-all/background.svg');
+   /* Scrim (poloprůhledná vrstva v barvě pozadí) přes grafiku ji zjemní,
+      aby nesoupeřila s obsahem / screenshoty. */
+   background-image:
+      linear-gradient(hsla(180, 14%, 96%, 0.55), hsla(180, 14%, 96%, 0.55)),
+      url('/img/catch-all/background.svg');
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
    background-attachment: fixed;
+}
+
+.dark body {
+   background-image:
+      linear-gradient(hsla(183, 95%, 4%, 0.55), hsla(183, 95%, 4%, 0.55)),
+      url('/img/catch-all/background.svg');
+}
+
+/* Screenshoty v obsahu jako čisté karty nad ambientním pozadím. */
+.prose img {
+   border-radius: 0.5rem;
+   border: 1px solid var(--color-fd-border);
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.dark .prose img {
+   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Barevné téma ze samostatné catch-all instance (~/nrp-catch-all-docs) --- */
