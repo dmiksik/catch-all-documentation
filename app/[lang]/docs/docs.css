@@ -20,11 +20,11 @@
 
 /* Střed o 0.5em výš než ostatní (2rem - 0.5em). */
 #nd-page {
-  padding-top: 1.5rem;
+  padding-top: 2.2rem;
 }
 
 #nd-toc {
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 /* Search tlačítko odsadit od loga nad ním (bylo nalepené). */
