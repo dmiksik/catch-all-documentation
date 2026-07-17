@@ -102,10 +102,12 @@ body {
 
 article a:hover {
   color: #C92876;
+  text-decoration-color: #C92876;
 }
 
 .dark article a:hover {
   color: #fd98b1;
+  text-decoration-color: #fd98b1;
 }
 
 .prose {
